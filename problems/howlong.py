@@ -30,6 +30,7 @@ def format_duration(seconds: int) -> str:
         remaining_minutes = (seconds % hour) // minute
         remaining_seconds = seconds % minute
         return f"{days} days, {remaining_hours} hours, {remaining_minutes} minutes, {remaining_seconds} seconds"
+    
     if seconds > year:
         years = seconds // year
         remaining_days = (seconds % year) // day
