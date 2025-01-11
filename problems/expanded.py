@@ -10,4 +10,4 @@ def expanded_form(num):
     return ' + '.join(expanded)
 
 number = 210
-print(expanded_form(number))
+print(expanded_form(number))  
