@@ -7,7 +7,6 @@ class LinkedList:
     def __init__(self):
         self.head = None
     
-    
     def is_empty(self):
         return self.head is None
     
@@ -85,6 +84,7 @@ def main():
                 Linked_List.prepend(myval)
         except EOFError:
             break
+        
     answ = input("reverse\n(y/n):").lower()
     if answ == 'y':
         Linked_List.reverse()
@@ -101,27 +101,6 @@ def main():
     print("Your Linked List:")
     Linked_List.display() 
 
-           
-           
-                    
-        
-
-    
-"""    print("The List after prepending")
-    Linked_List.prepend(5)
-    Linked_List.display() 
-    
-    print("Find 5")
-    print(Linked_List.find(5))
-    
-    print("Reversed")
-    Linked_List.reverse()
-    Linked_List.display()
-    
-    print("is it Empty?")
-    print(Linked_List.is_empty())"""
-    
-    
 
 if __name__ == "__main__":
     main()
