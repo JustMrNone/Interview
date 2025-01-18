@@ -9,7 +9,7 @@ def canJump(nums: List[int]) -> bool:
     return True
         
 
-
+#main
 
 
 
