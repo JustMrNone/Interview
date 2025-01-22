@@ -1,0 +1,3 @@
+void printsome(){
+    c
+}
