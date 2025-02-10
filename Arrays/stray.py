@@ -1,6 +1,5 @@
 from collections import Counter 
 
-
 myarr = [17, 17, 3, 17, 17, 17, 17]
 
 def stray(arr):
