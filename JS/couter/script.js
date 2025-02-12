@@ -69,7 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
     infip.onclick = function(){
     addOne(number3);
     }
-    infip.onclick = function(){
+    
+    infim.onclick = function(){
     minusOne(number3);
     if (number3.innerHTML <= 0){
         number3.innerHTML = 0;
