@@ -1,0 +1,17 @@
+
+body{
+    background-color: aliceblue;
+}
+.MainContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.number1, .number2, .number3 {
+    display: block; /* Ensures it behaves like a block element if needed */
+    text-align: center;
+}
+.buttons{
+    background-color: aqua;
+}
