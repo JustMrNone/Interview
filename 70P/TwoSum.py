@@ -1,18 +1,17 @@
-"""
-slow 
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        indexes = []
-        
-        for i in range(len(nums)):
-            for j in range(i + 1, len(nums)):
-                if nums[i] + nums[j] == target:
-                    indexes.extend([i, j])
-        return indexes
-        
-n * n = O(n ^ 2)
+from typing import list 
+# slower 
+# time complexity (n * n = O(n ^ 2)) 
+def twoSum(nums: List[int], target: int) -> List[int]:
+    indexes = []
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if nums[i] + nums[j] == target:
+                indexes.extend([i, j])
+    return indexes
+    
 
 
-"""
+
 from typing import List 
 
 #faster O(N)
