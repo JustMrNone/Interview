@@ -20,13 +20,12 @@ print(ex1)
 # optimal solution 
 def count_smalls_O(numbers):
     temp = sorted(numbers)
-    
     mydict = {}
-    
+    ans = []
     for index, number in enumerate(temp):
         if number not in mydict:
             mydict[number] = index
-    ans = []
+
     for i in numbers:
         ans.append(mydict[i])
         
