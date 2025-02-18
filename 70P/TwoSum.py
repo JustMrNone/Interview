@@ -1,4 +1,6 @@
-from typing import list 
+from typing import List 
+
+
 # slower 
 # time complexity (n * n = O(n ^ 2)) 
 def twoSum(nums: List[int], target: int) -> List[int]:
@@ -12,20 +14,20 @@ def twoSum(nums: List[int], target: int) -> List[int]:
 
 
 
-from typing import List 
 
 #faster O(N)
 
 def two_sum(nums: List[int] = [2, 11, 7, 15], target: int = 9):
     hash_map = {}
     
-    for index, value in enumerate(nums):
-        diff = target - value
+    for i, v in enumerate(nums):
+        diff = target - v 
         if diff in hash_map:
-            ans = [index, hash_map[diff]]
-            return ans 
-        
-        hash_map[value] = index
+            return [i, hash_map[diff]]
+
+        hash_map[v] = i
+
+
         
         
 print(two_sum())
