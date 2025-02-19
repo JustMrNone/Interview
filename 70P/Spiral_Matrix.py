@@ -38,6 +38,7 @@ def spiralOrder(matrix: List[List[int]]) -> List[int]:
 matrix1 = [[1,2,3],[4,5,6],[7,8,9]]
 matrix2 = [[1,2,3],[4,5,6],[7,8,9]]
 matrix3 = [[1,2,3],[4,5,6],[7,8,9]]
+matrix4 = [[1,2,3],[4,5,6],[7,8,9]]
 
 ex1 = spiralOrder(matrix1)
 print(ex1)
@@ -130,4 +131,27 @@ def spiral_order(matrix: List[List[int]]) -> list[int]:
     return ans
 
 print(spiral_order(matrix3))
-                
+
+
+
+def spiral(matrix: List[List[int]]) -> List[int]:
+    ans = []
+    
+    while matrix:
+        ans += (matrix.pop(0))
+    
+    if matrix and matrix[0]:
+        for row in matrix:
+            ans.append(row.pop())
+    
+    if matrix:
+        ans += (matrix.pop(0)[::-1])
+    
+    if matrix and matrix[0]:
+        for row in matrix[::-1]:
+            ans.append(row.pop(0))
+            
+    return ans 
+
+
+print(spiral)

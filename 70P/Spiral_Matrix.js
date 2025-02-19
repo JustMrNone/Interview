@@ -36,3 +36,37 @@ function SpiralMatrix(matrix){
 
 const answ = SpiralMatrix([[1,2,3],[4,5,6],[7,8,9]])
 console.log(answ);
+
+
+
+let spiral = (matrix) => {
+    let ans = []
+
+    while (matrix.length > 0){
+        ans.push(...matrix.shift())
+
+        if (matrix.length > 0 && matrix[0].length > 0){
+            for (let i = 0;i < matrix.length;i++){
+                ans.push(matrix[i].pop())
+            }
+        }
+        
+        if (matrix.length > 0){
+            ans.push(...matrix.pop().reverse())
+        }
+
+        if (matrix.length > 0 && matrix[0].length > 0){
+            for(let i = matrix.length - 1; i >= 0; i--){
+                ans.push(matrix[i].shift())
+            }
+        }
+
+    }
+
+    return ans;
+
+}
+
+const answer = spiral([[1,2,3],[4,5,6],[7,8,9]])
+
+console.log(answer)
