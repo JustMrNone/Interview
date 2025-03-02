@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",  // This will always use the latest ES version
+        "module": "commonjs",
+        "outDir": "./out",
+        "rootDir": "./",
+        "strict": true,
+        "esModuleInterop": true
+    },
+    "include": ["*.ts"],
+    "exclude": ["node_modules", "dist"]
+}
