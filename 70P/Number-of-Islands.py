@@ -87,3 +87,4 @@ def number_of_island2(grid):
 
 print("ass")
 print(number_of_island2(grid2))
+
