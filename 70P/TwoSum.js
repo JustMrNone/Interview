@@ -19,7 +19,7 @@ function twoSumON(nums, tar){
     let hashMap = {}
 
     for (let i = 0; i <= nums.length; i++){
-        let diff = target - nums[i]
+        let diff = tar - nums[i]
         if (diff in hashMap){
             return [i, hashMap[diff]]
         }

@@ -20,3 +20,5 @@ console.assert(isItPalindrome("A man a plan a canal Panama") === true, "Test Cas
 console.assert(isItPalindrome("No lemon no melon") === true, "Test Case 4 Failed");
 console.assert(isItPalindrome("Hello") === false, "Test Case 5 Failed");
 console.log("All test cases passed!");
+//tsc --project tsconfig.json
+//tsc .\twopointers.ts --target ESNext
