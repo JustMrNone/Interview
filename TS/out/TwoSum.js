@@ -23,10 +23,18 @@ function TwoSum2(nums, target) {
 function twoSumSlow(nums, target) {
     let indecies = [];
     let leng = nums.length;
-    for (let i = 0; i <= leng; i++)
-        for (let j = i + 1; j <= leng; j++)
+    for (let i = 0; i < leng; i++)
+        for (let j = i + 1; j < leng; j++)
             if (nums[i] + nums[j] === target)
                 indecies.push(i, j);
     return indecies;
 }
-console.log(twoSumSlow([2, 11, 7, 15], 9));
+function TwoSumFast(nums, target) {
+    let hashMap = {};
+    for (let i = 0; i < nums.length; i++) {
+        if (target - nums[i] in hashMap)
+            return [i, hashMap[target - nums[i]]];
+        hashMap[nums[i]] = i;
+    }
+    return [];
+}
