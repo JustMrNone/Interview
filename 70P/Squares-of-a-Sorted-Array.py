@@ -74,6 +74,7 @@ print(sorted_squares(nums))
 # This is more efficient than the O(n log n) complexity of the sortedsquared function
 def sortedSquares(nums: List[int]) -> List[int]:
     answer = deque()  # Initialize a deque to store the result
+    
     lp = 0  # Left pointer starting at the beginning of the list
     rp = len(nums) - 1  # Right pointer starting at the end of the list
     
@@ -96,21 +97,23 @@ print(sortedSquares(nums))
 
 
 """
-deque:
- 
-deque (double-ended queue)
-A deque (double-ended queue) is similar to a queue,
-but with flexible access at both ends. Deques allow both FIFO and LIFO (last-in-first-out) operations
+The difference in time complexity between inserting at the beginning of an array and using a
+`deque.appendleft()` operation comes down to how each data structure handles insertion.
 
-Core Properties
-Double-ended: Elements can be added or removed from both ends
-Dynamic size: Can grow or shrink as needed
-O(1) operations: Constant time for insertions and deletions at both ends
+### **1. Inserting at the Beginning of an Array (Python List)**
+   - **Time Complexity: \( O(n) \)**  
+   - Python lists are implemented as dynamic arrays.  
+   - When inserting at the beginning (`list.insert(0, element)`), all existing elements must be shifted one position to the right to make space for the new element.
+   - This results in a time complexity of **\( O(n) \)** since shifting elements takes linear time.
 
-"""
+### **2. Using `collections.deque.appendleft()`**
+   - **Time Complexity: \( O(1) \)**
+   - `deque` (double-ended queue) is implemented as a **doubly linked list** or a ring buffer.
+   - `appendleft()` adds an element at the beginning without shifting other elements.
+   - This results in a constant-time \( O(1) \) operation.
 
-"""
-A Queue Data Structure is a fundamental concept in computer science used for storing and managing data in a specific order. 
-It follows the principle of "First in, First out" (FIFO), where the first element added to the queue is the first one to be removed. 
-Queues are commonly used in various algorithms and applications for their simplicity and efficiency in managing data flow.
+### **Conclusion**
+- If you frequently insert elements at the beginning, `deque.appendleft()` is much more efficient (\( O(1) \) vs. \( O(n) \)).
+- If you need random access like a list (`arr[i]`), then a list is better despite slower insertions.
+
 """

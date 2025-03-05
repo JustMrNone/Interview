@@ -20,6 +20,9 @@ def maxProfit(prices: List[int]) -> int:
         
     return maxp
 
+
+
+
 # The maxProfit2 function uses a brute-force approach to find the maximum profit.
 # Time complexity: O(n^2), where n is the number of days. This is because we use two nested loops to check every pair of days.
 
